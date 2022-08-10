@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddFoodActivity">
+
+    <TextView
+        android:id="@+id/loy_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/taom_qo_shish"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="#09A55A"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:hint="@string/taom_nomi"
+        style="@style/edittext_style"
+        app:layout_constraintTop_toBottomOf="@+id/loy_name"
+        app:layout_constraintBottom_toTopOf="@+id/edt_mahsulot"
+        />
+    <EditText
+        android:id="@+id/edt_mahsulot"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="2"
+        android:hint="@string/kerakli_maxsulotlar"
+        style="@style/edittext_style"
+        app:layout_constraintTop_toBottomOf="@+id/edt_name"
+        app:layout_constraintBottom_toTopOf="@+id/edt_tayyorlash"
+        />
+    <EditText
+        android:id="@+id/edt_tayyorlash"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="3"
+        android:hint="@string/taom_tayyorlanish_tartibi"
+        style="@style/edittext_style"
+        app:layout_constraintTop_toBottomOf="@+id/edt_mahsulot"
+        app:layout_constraintBottom_toTopOf="@+id/btn_save"
+        />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saqlash"
+        style="@style/btn_style"
+        app:layout_constraintTop_toBottomOf="@+id/edt_tayyorlash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
